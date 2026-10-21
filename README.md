@@ -13,4 +13,4 @@ Laboratorio de suelos en su teléfono. Granulometría por tamizado, límites de 
 ASTM D6913 · ASTM D2216 · ASTM D4318 · ASTM D2487 · AASHTO M 145
 
 ## Descarga
-El APK se publicará en la sección *Releases* de este repositorio.
+Página de descarga: https://jluismp2023.github.io/geosuelo-descargas/
