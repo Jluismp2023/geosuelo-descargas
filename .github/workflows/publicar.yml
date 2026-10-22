@@ -30,7 +30,7 @@ jobs:
           else
             gh release create "v$VERSION" GeoSuelo.apk \
               --repo "${{ github.repository }}" --target main \
-              --title "GeoSuelo $VERSION (prueba)" \
-              --notes "Versión de prueba para Android. Granulometría, límites de Atterberg, clasificación SUCS y AASHTO, curva granulométrica, carta de plasticidad y faja MTOP. Los datos no se guardan al cerrar la app."
+              --title "GeoSuelo $VERSION" \
+              --notes "GeoSuelo para Android: granulometría, límites de Atterberg, clasificación SUCS y AASHTO, curva granulométrica, carta de plasticidad y faja MTOP. Gratis con anuncios; Premium sin anuncios por USD 2,99. Si tiene la 1.0.0, desinstálela una vez antes de instalar esta versión."
           fi
           git push origin --delete subida
