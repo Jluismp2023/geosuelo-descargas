@@ -82,6 +82,21 @@
   .gallery-text h3 { font-size: 22px; margin: 0 0 8px; }
   .gallery-text p { color: var(--muted); margin: 0; }
 
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; align-items: start; }
+  .plan { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 28px; }
+  .plan.premium { border-color: #c97a3566; background: linear-gradient(180deg, #c97a3514, var(--panel) 40%); }
+  .plan h3 { margin: 0; font-size: 20px; }
+  .price { font-size: 42px; font-weight: 800; margin: 8px 0 2px; letter-spacing: -.02em; }
+  .price small { font-size: 15px; font-weight: 500; color: var(--muted); }
+  .plan > ul { list-style: none; padding: 0; margin: 20px 0 0; }
+  .plan > ul > li { padding: 9px 0 9px 30px; border-top: 1px solid var(--line); position: relative; font-size: 15px; }
+  .plan > ul > li::before { content: "✓"; position: absolute; left: 4px; color: var(--ok); font-weight: 700; }
+  .plan > ul > li.no { color: var(--soft); }
+  .plan > ul > li.no::before { content: "–"; color: var(--soft); }
+  .buy { margin-top: 24px; background: var(--bg2); border: 1px dashed #c97a3566; border-radius: 14px; padding: 18px 20px; }
+  .buy h4 { margin: 0 0 8px; font-size: 15px; color: var(--accent); }
+  .buy ol { margin: 0 0 14px; padding-left: 20px; color: var(--muted); font-size: 14px; }
+  .btn-paypal { background: #ffc439; color: #111; }
   .install { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
   .step-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
   .step-card h3 { margin: 0 0 12px; font-size: 18px; }
@@ -121,6 +136,7 @@
     <nav class="nav-links" aria-label="Secciones">
       <a href="#funciones">Funciones</a>
       <a href="#capturas">Capturas</a>
+      <a href="#premium">Premium</a>
       <a href="#instalar">Instalar</a>
       <a href="#preguntas">Preguntas</a>
     </nav>
@@ -132,7 +148,7 @@
   <div class="hero" id="descargar">
     <div class="wrap">
       <div>
-        <span class="eyebrow">Versión de prueba · Android</span>
+        <span class="eyebrow">Versión 1.1 · Android</span>
         <h1>El laboratorio de suelos <em>en su teléfono</em></h1>
         <p class="lead">Ingrese el tamizado y los límites de Atterberg, y GeoSuelo calcula la curva granulométrica, clasifica el suelo en SUCS y AASHTO y le dice si el material cumple la faja del MTOP. Para estudiantes, laboratoristas, residentes y fiscalizadores.</p>
         <div class="cta">
@@ -141,7 +157,7 @@
             <span>Descargar para Android<small>APK · teléfono y tablet</small></span>
           </a>
         </div>
-        <div class="chips"><span>Gratis</span><span>Funciona sin internet</span><span>Normas ASTM, AASHTO y MTOP</span></div>
+        <div class="chips"><span>Gratis</span><span>Funciona sin internet</span><span>Premium sin anuncios USD 2,99</span></div>
       </div>
       <div class="phones">
         <div class="phone a"><img src="capturas/clasificacion.webp" width="585" height="1266" alt="Clasificación SUCS y AASHTO con la carta de plasticidad"></div>
@@ -162,7 +178,7 @@
         <div class="feature"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 17L17 7M7 12h4"/></svg></div><h3>Clasificación SUCS</h3><p>Símbolo y nombre completo del grupo, incluidos los símbolos dobles y la zona CL-ML, sobre la carta de plasticidad.</p><span class="norma">ASTM D2487</span></div>
         <div class="feature"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 19h16M6 15h12M8 11h8M10 7h4"/></svg></div><h3>Clasificación AASHTO</h3><p>Grupo e índice de grupo, con la calificación del suelo como subrasante. También muestra el índice con la fórmula antigua que usan varios laboratorios.</p><span class="norma">AASHTO M 145</span></div>
         <div class="feature"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg></div><h3>Faja del MTOP</h3><p>Compara la curva con la faja de sub-base Clase 2 y base Clase 1-B, y dice en qué tamiz no cumple.</p><span class="norma">MOP-001-F-2002</span></div>
-        <div class="feature"><span class="tag">PRÓXIMAMENTE</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></svg></div><h3>Informe en PDF y más ensayos</h3><p>Informe listo para firmar, guardado de muestras, Proctor y CBR.</p></div>
+        <div class="feature"><span class="tag">PRÓXIMAMENTE</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h6"/></svg></div><h3>Informe en PDF y más ensayos</h3><p>Informe listo para firmar, guardado de muestras, Proctor y CBR. Llegan primero a Premium.</p></div>
       </div>
     </div>
   </section>
@@ -177,6 +193,48 @@
       <div class="gallery-main">
         <figure><div class="phone"><img id="shot" src="capturas/clasificacion.webp" width="585" height="1266" alt=""></div></figure>
         <div class="gallery-text" aria-live="polite"><h3 id="shot-title"></h3><p id="shot-text"></p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="premium" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Gratis para siempre. Premium sin anuncios.</h2>
+        <p>Todos los cálculos están en la versión gratuita. Premium es un pago único por dispositivo.</p>
+      </div>
+      <div class="plans">
+        <div class="plan">
+          <h3>Gratis</h3>
+          <div class="price">USD 0</div>
+          <ul>
+            <li>Granulometría, límites, SUCS y AASHTO</li>
+            <li>Curva granulométrica y carta de plasticidad</li>
+            <li>Faja MTOP de sub-base y base</li>
+            <li class="no">Con anuncios</li>
+          </ul>
+        </div>
+        <div class="plan premium">
+          <h3>Premium</h3>
+          <div class="price">USD 2,99 <small>pago único</small></div>
+          <ul>
+            <li>Todo lo de la versión gratuita</li>
+            <li>Sin anuncios</li>
+            <li>Informe PDF con su logo (próxima versión)</li>
+            <li>Ensayos guardados ilimitados y Excel (próxima versión)</li>
+          </ul>
+          <div class="buy">
+            <h4>Cómo comprar</h4>
+            <ol>
+              <li>Pague por PayPal (o envíe el pago a <strong>jluismacasp@gmail.com</strong>).</li>
+              <li>En la app toque <strong>Quitar anuncios</strong> y copie el código del dispositivo.</li>
+              <li>Envíe ese código y el comprobante a <a href="mailto:jluismp2023@gmail.com?subject=GeoSuelo%20Premium">jluismp2023@gmail.com</a>.</li>
+              <li>Escriba en la app el código de activación que recibirá por correo.</li>
+            </ol>
+            <a class="btn btn-paypal" href="https://paypal.me/jluismacasp/2.99USD">Pagar USD 2,99 con PayPal</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -213,11 +271,13 @@
     <div class="wrap">
       <div class="section-head"><h2>Preguntas frecuentes</h2></div>
       <div class="faq">
-        <details><summary>¿Es gratis?</summary><p>Sí. La app se puede descargar y usar sin costo.</p></details>
+        <details><summary>¿Es gratis?</summary><p>Sí. Todos los cálculos son gratuitos; la versión gratis muestra anuncios. Premium (USD 2,99, pago único) los quita.</p></details>
+        <details><summary>¿Premium sirve en otro teléfono?</summary><p>El código de activación es para un dispositivo. Si cambia de teléfono, escríbanos con el código nuevo y el comprobante.</p></details>
         <details><summary>¿Necesita internet?</summary><p>No. Todos los cálculos se hacen en el teléfono.</p></details>
         <details><summary>¿Qué normas sigue?</summary><p>ASTM D6913 para granulometría, ASTM D4318 para límites, ASTM D2487 para SUCS, AASHTO M 145 para AASHTO y las fajas de la MOP-001-F-2002 del MTOP para sub-base y base.</p></details>
         <details><summary>¿Por qué mi resultado no coincide con el de un informe?</summary><p>Revise primero los datos. Hay dos diferencias frecuentes: muchos laboratorios usan la fórmula antigua del índice de grupo AASHTO, que GeoSuelo también muestra como referencia, y algunos informes asignan símbolos como GM a materiales con menos de 5 % de finos, que la norma clasifica como GW o GP.</p></details>
-        <details><summary>¿Se guardan mis ensayos?</summary><p>En esta versión de prueba los datos se pierden al cerrar la app. El guardado de muestras y el informe en PDF vienen en la próxima versión.</p></details>
+        <details><summary>¿Se guardan mis ensayos?</summary><p>Todavía no: los datos se pierden al cerrar la app. El guardado de muestras y el informe en PDF vienen en la próxima versión.</p></details>
+        <details><summary>Tenía la versión 1.0.0, ¿qué hago?</summary><p>Desinstálela una sola vez y luego instale la 1.1. Desde esta versión la app se firma con su llave definitiva y las próximas actualizaciones se instalan encima.</p></details>
         <details><summary>¿Es seguro instalar el APK?</summary><p>El APK se compila desde el código del proyecto en GitHub y se publica en esta página. Android pide permiso porque no viene de Play Store.</p></details>
         <details><summary>¿Dónde quedan mis datos?</summary><p>Solo en su teléfono. Vea la <a href="privacidad.html">política de privacidad</a>.</p></details>
       </div>
